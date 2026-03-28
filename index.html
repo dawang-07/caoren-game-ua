@@ -3,598 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>曹仁 | 游戏素材创意专家</title>
+    <title>曹仁 | 游戏买量素材专家</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ========== Gemini 设计风格：现代、动感、专业 ========== */
+        /* ========== Game UI Pro - Final Design ========== */
         :root {
-            --primary: #818cf8;
-            --primary-dark: #6366f1;
-            --accent: #34d399;
-            --accent-dark: #10b981;
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --text-primary: #e2e8f0;
-            --text-secondary: #94a3b8;
-            --text-heading: #f8fafc;
-            --gradient-main: linear-gradient(45deg, #818cf8, #a78bfa);
-            --gradient-accent: linear-gradient(45deg, #34d399, #6ee7b7);
-            --shadow-glow: 0 0 40px rgba(129, 140, 248, 0.2);
-            --transition-speed: 0.4s;
+            --primary: #facc15; /* 传说金 */
+            --secondary: #22d3ee; /* 能量青 */
+            --accent: #f43f5e; /* 警告红 */
+            --bg-dark: #0c0a09; /* 黑曜石 */
+            --bg-card: #1c1917; /* 深色岩石 */
+            --text-primary: #f8fafc;
+            --text-secondary: #a8a29e;
+            --gradient-gold: linear-gradient(135deg, #fde047, #facc15);
+            --gradient-cyan: linear-gradient(135deg, #67e8f9, #22d3ee);
+            --glow-gold: 0 0 30px rgba(250, 204, 21, 0.5);
+            --transition-speed: 0.5s;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
+        /* Base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
             line-height: 1.7;
             color: var(--text-primary);
             background: var(--bg-dark);
             overflow-x: hidden;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231c1917' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h5v1H6v5H5V6H0V5h5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .section {
-            padding: 100px 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 800;
-            color: var(--text-heading);
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-        }
-
+        /* Game UI Style Navbar */
         .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(15, 23, 42, 0.7);
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(12, 10, 9, 0.8);
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(129, 140, 248, 0.1);
-            z-index: 1000;
-            transition: all var(--transition-speed) ease;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(90deg, transparent, var(--primary), transparent) 1;
+            box-shadow: 0 0 30px rgba(12, 10, 9, 0.8);
             height: 80px;
         }
-
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-heading);
-        }
-
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+        .nav-logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); text-shadow: var(--glow-gold); }
+        .nav-menu { display: flex; gap: 12px; }
         .nav-menu a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 10px 16px;
-            margin: 0 4px;
-            border-radius: 8px;
-            transition: all var(--transition-speed) ease;
+            text-decoration: none; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; padding: 10px 18px;
+            border-radius: 8px; transition: all 0.3s ease; position: relative;
         }
-
         .nav-menu a:hover, .nav-menu a.active {
-            color: var(--text-heading);
-            background: rgba(129, 140, 248, 0.1);
+            color: var(--primary); background: rgba(250, 204, 21, 0.1); text-shadow: var(--glow-gold);
         }
 
+        /* Hero Section - Character Selection Style */
         .hero {
-            display: flex;
-            align-items: center;
-            min-height: 100vh;
+            display: flex; align-items: center; min-height: 100vh;
             padding-top: 80px;
+            position: relative;
         }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(ellipse at center, rgba(250, 204, 21, 0.1) 0%, transparent 60%);
+            z-index: 0;
+        }
+        .hero-content {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; z-index: 1;
+        }
+        .hero-text .name { font-size: 5rem; font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; margin-bottom: 16px; }
+        .hero-text .title { font-size: 1.5rem; color: var(--secondary); font-weight: 600; margin-bottom: 24px; }
+        .hero-text .summary { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            align-items: center;
-            gap: 60px;
-        }
-        
-        .hero-text .name {
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--text-heading);
-            line-height: 1.1;
-            margin-bottom: 16px;
-        }
-
-        .hero-text .title {
-            font-size: 1.5rem;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-
-        .hero-text .summary {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 500px;
-            margin-bottom: 32px;
-        }
-        
-        .hero-contact a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--text-secondary);
-            margin-right: 24px;
-            margin-bottom: 12px;
-            font-size: 0.9rem;
-            transition: color var(--transition-speed) ease;
-        }
-
-        .hero-contact a:hover {
-            color: var(--primary);
-        }
-
-        .hero-dashboard {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            perspective: 1000px;
-        }
-
+        /* Dashboard as Stats Panel */
+        .hero-dashboard { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .dashboard-card {
             background: var(--bg-card);
-            border: 1px solid rgba(129, 140, 248, 0.2);
-            border-radius: 16px;
-            padding: 24px;
-            transition: all var(--transition-speed) ease;
-            transform-style: preserve-3d;
-        }
-
-        .dashboard-card:hover {
-            transform: translateY(-8px) rotateX(10deg);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .dashboard-card .value {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: var(--gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .dashboard-card .label {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .experience-timeline {
-            position: relative;
-            padding-left: 40px;
-        }
-
-        .experience-timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 2px;
-            height: calc(100% - 20px);
-            background: rgba(129, 140, 248, 0.2);
-        }
-        
-        .timeline-item {
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -48px;
-            top: 8px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            border: 3px solid var(--primary);
-            transition: all var(--transition-speed) ease;
-        }
-        
-        .timeline-item:hover::before {
-            background: var(--primary);
-            transform: scale(1.2);
-        }
-
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .timeline-company {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-heading);
-        }
-        
-        .timeline-date {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        .timeline-role {
-            font-size: 1rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .timeline-achievement {
-            display: inline-block;
-            background: rgba(52, 211, 153, 0.1);
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 16px;
-        }
-
-        .timeline-list li {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-            list-style-type: none;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .timeline-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-        }
-        
-        .case-study {
-            margin-top: 20px;
-            padding: 24px;
-            background: rgba(129, 140, 248, 0.05);
+            border: 2px solid #292524;
             border-radius: 12px;
-            border: 1px solid rgba(129, 140, 248, 0.1);
-        }
-        
-        .case-study-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--primary-light);
-            margin-bottom: 16px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .skill-category {
-            background: var(--bg-card);
-            border: 1px solid rgba(129, 140, 248, 0.2);
-            border-radius: 16px;
-            padding: 32px;
-        }
-
-        .skill-category h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill-tag {
-            background: rgba(129, 140, 248, 0.1);
-            color: var(--primary-light);
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .portfolio-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(129, 140, 248, 0.2);
-            border-radius: 16px;
-            padding: 32px;
+            padding: 24px;
             text-align: center;
+            transition: all 0.3s ease;
         }
-        
-        .portfolio-card .icon {
-            font-size: 3rem;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
+        .dashboard-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: var(--glow-gold); }
+        .dashboard-card .value { font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+        .dashboard-card .label { font-size: 0.9rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Section as Quest Log */
+        .section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-title { font-size: 3rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px; }
+        .section-subtitle { font-size: 1.2rem; color: var(--text-secondary); }
+
+        /* Timeline as Mission Log */
+        .experience-timeline { position: relative; padding-left: 40px; }
+        .experience-timeline::before { content: ''; position: absolute; left: 0; top: 10px; width: 3px; height: calc(100% - 20px); background: var(--gradient-gold); }
+        .timeline-item { margin-bottom: 40px; }
+        .timeline-content { background: var(--bg-card); border-radius: 12px; padding: 32px; border: 2px solid #292524; }
+        .timeline-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .timeline-company { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+        .timeline-date { color: var(--text-secondary); font-size: 0.9rem; }
+        .timeline-role { font-size: 1.1rem; color: var(--secondary); font-weight: 600; margin-bottom: 16px; }
+        .timeline-list { list-style-type: none; padding-left: 0; }
+        .timeline-list li { margin-bottom: 12px; padding-left: 20px; position: relative; }
+        .timeline-list li::before { content: '◈'; position: absolute; left: 0; color: var(--primary); }
+
+        /* Achievement Badge */
+        .achievement-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(45deg, rgba(250, 204, 21, 0.1), rgba(250, 204, 21, 0.2));
+            border: 1px solid var(--primary); color: var(--primary);
+            padding: 8px 16px; border-radius: 8px; font-weight: 600; margin-bottom: 20px;
         }
 
-        .portfolio-card a.btn {
-            display: inline-block;
-            margin-top: 24px;
-            padding: 12px 24px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-        }
+        /* Case Study as Loot Info */
+        .case-study { margin-top: 24px; padding: 24px; background: #0c0a09; border-radius: 8px; border: 2px solid #292524; }
+        .case-study-title { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 16px; }
 
-        .contact-section {
-            text-align: center;
+        /* Skills as Skill Tree */
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .skill-category { background: var(--bg-card); border: 2px solid #292524; border-radius: 12px; padding: 32px; }
+        .skill-category h3 { font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 20px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+        .skill-tag { background: #292524; color: var(--text-secondary); padding: 8px 16px; border-radius: 8px; font-size: 0.9rem; }
+
+        /* Portfolio as Armory */
+        .portfolio-video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
+        .video-placeholder {
+            aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; position: relative;
+            border: 2px solid #292524;
         }
-        
+        .video-placeholder iframe { width: 100%; height: 100%; border: none; }
+        .video-title { margin-top: 16px; font-weight: 600; text-align: center; }
+
+        /* Contact as Communication Channel */
+        .contact-section { text-align: center; }
         .contact-section .btn {
-            display: inline-block;
-            margin-top: 32px;
-            padding: 16px 32px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
+            display: inline-block; margin-top: 32px; padding: 18px 40px; background: var(--gradient-gold);
+            color: var(--bg-dark); text-decoration: none; border-radius: 8px; font-weight: 800; font-size: 1.2rem;
+            transition: all 0.3s ease; box-shadow: var(--glow-gold);
         }
+        .contact-section .btn:hover { transform: scale(1.05); }
 
-        /* Animations */
-        [data-animate] {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        [data-animate].in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Navbar -->
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">曹仁</div>
                 <div class="nav-menu">
-                    <a href="#home" class="active">首页</a>
-                    <a href="#experience">工作经历</a>
-                    <a href="#skills">专业技能</a>
-                    <a href="#portfolio">个人作品</a>
-                    <a href="#contact">联系我</a>
+                    <a href="#home" class="active">主页</a>
+                    <a href="#experience">履历</a>
+                    <a href="#skills">技能</a>
+                    <a href="#portfolio">作品</a>
+                    <a href="#contact">联络</a>
                 </div>
             </div>
         </nav>
 
+        <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-grid">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
                 <div class="hero-text">
-                    <div class="name" data-animate>曹仁</div>
-                    <div class="title" data-animate>素材创意策划 / 广告视频制作 / 发行素材项目负责人</div>
-                    <p class="summary" data-animate>游戏设计专业出身，8 年游戏买量素材经验，具备成熟的创意方法论和全流程制作能力，擅长通过数据驱动优化创意策略。</p>
-                    <div class="hero-contact" data-animate>
-                        <a href="mailto:932120004@qq.com"><i class="fas fa-envelope"></i> 932120004@qq.com</a>
-                        <a href="#"><i class="fas fa-map-marker-alt"></i> 北京</a>
+                    <div class="name">曹仁</div>
+                    <div class="title">素材创意策划 / 广告视频制作 / 发行素材项目负责人</div>
+                    <p class="summary">游戏设计专业出身，8 年游戏买量素材经验，将抽象的游戏卖点精准转化为高转化率的视觉语言，用创意和数据双重驱动增长。</p>
+                    <div class="hero-dashboard">
+                        <div class="dashboard-card">
+                            <div class="value">8 年</div>
+                            <div class="label">游戏素材经验</div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="value">50+</div>
+                            <div class="label">负责项目</div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="value">+144%</div>
+                            <div class="label">CTR 最高提升</div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="value">股份</div>
+                            <div class="label">激励获得者</div>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-dashboard">
-                    <div class="dashboard-card" data-animate>
-                        <div class="value">8 年</div>
-                        <div class="label">游戏素材经验</div>
-                    </div>
-                    <div class="dashboard-card" data-animate>
-                        <div class="value">50+</div>
-                        <div class="label">负责项目</div>
-                    </div>
-                    <div class="dashboard-card" data-animate>
-                        <div class="value">+144%</div>
-                        <div class="label">CTR 最高提升</div>
-                    </div>
-                    <div class="dashboard-card" data-animate>
-                        <div class="value">股份</div>
-                        <div class="label">激励获得者</div>
-                    </div>
+                <!-- You can add a character image or 3D model viewer here -->
+                <div class="hero-visual">
+                    <!-- Placeholder for a cool visual -->
                 </div>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="section">
-            <div class="section-header" data-animate>
-                <h2 class="section-title">工作经历</h2>
-                <p class="section-subtitle">从创意执行到团队管理，每一步都积累成长</p>
+            <div class="section-header">
+                <h2 class="section-title">任务履历</h2>
+                <p class="section-subtitle">从创意执行到团队管理，每一个任务都积累了宝贵经验</p>
             </div>
             <div class="experience-timeline">
-                <div class="timeline-item" data-animate>
-                    <div class="timeline-header">
-                        <div class="timeline-company">元保集团</div>
-                        <div class="timeline-date">2023.10 - 至今</div>
-                    </div>
-                    <div class="timeline-role">素材创意制作</div>
-                    <div class="timeline-achievement">🏆 入职半年获得股份激励</div>
-                    <ul class="timeline-list">
-                        <li>负责国内 IAA/IAP 小游戏素材创意与制作，搭建完善内部发行素材产出流程。</li>
-                        <li>为研发侧立项提供支持，如世界观素材、玩法测试等。</li>
-                        <li>研究各类 AI 工具提升效率，为产品玩法立项、美术风格等提供支持。</li>
-                    </ul>
-                </div>
-                
-                <div class="timeline-item" data-animate>
-                    <div class="timeline-header">
-                        <div class="timeline-company">点点互动（Century Games）</div>
-                        <div class="timeline-date">2024.08 - 2024.09</div>
-                    </div>
-                    <div class="timeline-role">创意策划</div>
-                    <ul class="timeline-list">
-                        <li>负责国内模拟经营类产品信息流广告创意，海外 playable 广告创意。</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item" data-animate>
-                    <div class="timeline-header">
-                        <div class="timeline-company">竞技世界（北京）网络技术有限公司</div>
-                        <div class="timeline-date">2019.06 - 2024.03</div>
-                    </div>
-                    <div class="timeline-role">发行素材项目负责人</div>
-                    <div class="timeline-achievement">🏅 入职首年荣获“公司最佳新锐奖”</div>
-                     <div class="case-study">
-                        <div class="case-study-title">🌟 核心业绩案例（以SLG《King of septsea》出海项目为例）</div>
-                        <p>通过多次美术风格和游戏玩法变种的 A/B 测试素材，精准锁定了最匹配目标用户的画风与买量噱头。将 T1国家CTR由0.9%拉升至2.2%，CVR由35%提升至52%，CPI从10美金骤降至1.6美金；T3国家CTR由0.7%升至1.5%，CVR由17%升至36%，CPI从1.6美金降至0.3美金（Install模式）。</p>
+                <!-- 元保集团 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">元保集团</div>
+                            <div class="timeline-date">2023.10 - 至今</div>
+                        </div>
+                        <div class="timeline-role">素材创意制作</div>
+                        <div class="achievement-badge">🏆 入职半年获得股份激励</div>
+                        <ul class="timeline-list">
+                            <li>负责国内 IAA/IAP 小游戏的核心素材创意与制作闭环。</li>
+                            <li>从 0 到 1 搭建并完善内部发行素材产出标准、归档流程与质量验收体系。</li>
+                            <li>深入研发源头，为新品立项提供美术风格、玩法测试等数据支持。</li>
+                            <li>引入 AI 工具融入工作流，提升团队优化效率。</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="timeline-item" data-animate>
-                    <div class="timeline-header">
-                        <div class="timeline-company">掌游天下（北京）信息技术股份有限公司</div>
-                        <div class="timeline-date">2018.07 - 2019.06</div>
+                <!-- 竞技世界 -->
+                <div class="timeline-item">
+                     <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">竞技世界（北京）网络技术有限公司</div>
+                            <div class="timeline-date">2019.06 - 2024.03</div>
+                        </div>
+                        <div class="timeline-role">发行素材项目负责人</div>
+                        <div class="achievement-badge">🏅 入职首年荣获“公司最佳新锐奖”</div>
+                        <div class="case-study">
+                            <div class="case-study-title">🌟 核心业绩案例 - SLG《King of septsea》出海项目</div>
+                            <p>通过多次美术风格和玩法的 A/B 测试素材，精准锁定目标用户。成果：T1 国家 CTR +144%，CPI -84%；T3 国家 CTR +114%，CPI -81%。</p>
+                        </div>
                     </div>
-                    <div class="timeline-role">Playable广告创意</div>
-                     <ul class="timeline-list">
-                        <li>负责多品类休闲及中重度游戏的 Playable (可玩广告) 创意制作。</li>
-                    </ul>
                 </div>
+                <!-- Other experiences can be added here -->
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="section">
-            <div class="section-header" data-animate>
-                <h2 class="section-title">专业技能</h2>
-                <p class="section-subtitle">全流程能力覆盖，从创意到数据</p>
+            <div class="section-header">
+                <h2 class="section-title">技能树</h2>
+                <p class="section-subtitle">已解锁的专业能力</p>
             </div>
             <div class="skills-grid">
-                <div class="skill-category" data-animate>
-                    <h3>创意制作</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> 创意策划</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">创意脚本</span>
-                        <span class="skill-tag">市场调研</span>
-                        <span class="skill-tag">竞品分析</span>
-                        <span class="skill-tag">用户画像</span>
-                        <span class="skill-tag">A/B 测试</span>
+                        <span class="skill-tag">创意脚本</span><span class="skill-tag">市场调研</span><span class="skill-tag">A/B 测试</span>
                     </div>
                 </div>
-                <div class="skill-category" data-animate>
-                    <h3>软件技能</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> 制作工具</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">After Effects</span>
-                        <span class="skill-tag">Premiere</span>
-                        <span class="skill-tag">Unreal Engine</span>
-                        <span class="skill-tag">3ds Max</span>
-                        <span class="skill-tag">AI 工具</span>
+                        <span class="skill-tag">After Effects</span><span class="skill-tag">Premiere</span><span class="skill-tag">Unreal Engine</span>
                     </div>
                 </div>
-                 <div class="skill-category" data-animate>
-                    <h3>数据分析</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> 数据分析</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">CTR 优化</span>
-                        <span class="skill-tag">CVR 优化</span>
-                        <span class="skill-tag">数据归因</span>
-                        <span class="skill-tag">素材拆解</span>
+                        <span class="skill-tag">CTR/CVR 优化</span><span class="skill-tag">素材拆解</span><span class="skill-tag">竞品监测</span>
                     </div>
                 </div>
-                <div class="skill-category" data-animate>
-                    <h3>项目管理</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> 项目管理</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">团队管理</span>
-                        <span class="skill-tag">跨部门协作</span>
-                        <span class="skill-tag">外包管理</span>
-                        <span class="skill-tag">流程搭建</span>
+                        <span class="skill-tag">团队管理</span><span class="skill-tag">跨部门协作</span><span class="skill-tag">外包管理</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Portfolio Section -->
         <section id="portfolio" class="section">
-             <div class="section-header" data-animate>
-                <h2 class="section-title">个人作品</h2>
-                <p class="section-subtitle">查看我的游戏素材创意作品集</p>
+            <div class="section-header">
+                <h2 class="section-title">作品军械库</h2>
+                <p class="section-subtitle">精选创意作品展示</p>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-card" data-animate>
-                    <div class="icon"><i class="fab fa-bilibili"></i></div>
-                    <h3>B 站在线作品</h3>
-                    <p>在线查看精选游戏素材作品合集。</p>
-                    <a href="https://space.bilibili.com/233305892" target="_blank" class="btn">立即查看</a>
+            <div class="portfolio-video-grid">
+                <!-- Video 1 -->
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <iframe src="//player.bilibili.com/player.html?bvid=BV1Xx41117tr&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>
+                    <div class="video-title">【替换成你的视频标题 1】</div>
                 </div>
-                 <div class="portfolio-card" data-animate>
-                    <div class="icon"><i class="fas fa-folder-open"></i></div>
-                    <h3>完整作品集</h3>
-                    <p>百度网盘下载高清完整作品集。</p>
-                    <a href="https://pan.baidu.com/s/1541FC4d7eX_ZvrY1wf73hw?pwd=6666" target="_blank" class="btn">下载作品 (提取码: 6666)</a>
+                <!-- Video 2 -->
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <!-- Replace with your video iframe -->
+                    </div>
+                    <div class="video-title">【替换成你的视频标题 2】</div>
                 </div>
+                <!-- Video 3 -->
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <!-- Replace with your video iframe -->
+                    </div>
+                    <div class="video-title">【替换成你的视频标题 3】</div>
+                </div>
+            </div>
+            <div class="video-instruction">
+                <strong>视频替换指南：</strong> 在GitHub上编辑index.html，搜索“替换成你的视频标题”，然后将B站分享的嵌入代码中的src链接替换到iframe标签中即可。
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="section contact-section">
-            <div class="section-header" data-animate>
-                <h2 class="section-title">联系我</h2>
-                <p class="section-subtitle">期待与你合作，无论是全职机会还是项目合作，都欢迎联系。</p>
-                <a href="mailto:932120004@qq.com" class="btn">发送邮件</a>
+            <div class="section-header">
+                <h2 class="section-title">建立联络</h2>
+                <p class="section-subtitle">期待与你合作，开启新的任务</p>
+                <a href="mailto:932120004@qq.com" class="btn">发送通讯请求</a>
             </div>
         </section>
     </div>
 
     <script>
+        // Simple scroll animation
         document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('[data-animate]');
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
                     }
                 });
             }, { threshold: 0.1 });
 
-            animatedElements.forEach(el => {
+            document.querySelectorAll('.section > div, .timeline-item').forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(el);
             });
         });
